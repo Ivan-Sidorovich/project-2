@@ -1,0 +1,157 @@
+
+
+
+
+.content-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.content-window-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-top-p {
+  font-family: Lato;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0.75px;
+}
+
+.window-top-p-bottom {
+  color: #9f9f9f;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 0.35px;
+  margin-top: -15px
+}
+
+.content-window-center {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  min-height: 767px;
+  margin-top: 60px;
+}
+
+.window {
+  position: relative;
+  width: 263px;
+  height: 364px;
+  transition-duration: 0.2s;
+  margin-bottom: 30px;
+}
+
+.window-text {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: 83px;
+  justify-content: space-around;
+  
+}
+
+.window-shadow {
+  position: absolute;
+  opacity: 0;
+  background-image: url(../img/Background.png);
+  width: 261px;
+  height: 280px;
+  transition-duration: 0.3s;
+}
+
+.window:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+
+.window:hover .window-shadow {
+  opacity: 1;
+}
+
+.p-top {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.insh {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 13px;
+  
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.p-prise {
+  color: $standardColor;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.window-img {
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
+}
+
+.window-photo {
+  height: 280px;
+}
+
+.in-shadow {
+  width: 123px;
+  height: 39px;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 98px;
+  margin-left: 70px;
+}
+
+.content-window-bottom-button {
+  width: 212px;
+  height: 48px;
+  background-color: $standardColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+  &:hover{
+    background-color: darken($color: $standardColor, $amount: 5)
+
+  }
+  &:active{
+    background-color: lighten($color: $standardColor, $amount: 5)
+
+  }
+}
+
+.window-bottob-p {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0.4px;
+}
+
+.content-window-bottom {
+  margin-top: 58px;
+}

@@ -1,0 +1,60 @@
+.sentence {
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.bg {
+  position: absolute;
+  width: 175px;
+  height: 82px;
+  background-color: #ffffff;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.size-bg1 {
+  width: 175px;
+}
+
+.size-bg2 {
+  width: 225px;
+}
+
+.size-bg3 {
+  width: 162px;
+}
+
+.size-bg4 {
+  width: 180px;
+}
+
+.img-1 {
+  position: relative;
+}
+
+.sentence-p {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.45px;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 19px;
+}
+
+.sentence-h3 {
+  color:$standardColor;
+  font-size: 30px;
+  font-style: normal;
+  letter-spacing: 0.75px;
+  line-height: normal;
+  margin-left: 19px;
+}

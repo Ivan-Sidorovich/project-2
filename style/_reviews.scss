@@ -1,0 +1,149 @@
+.reviews2 {
+  max-width: 1600px;
+  height: 438px;
+  background-color:#c7c7c7;
+  background-image: url(../img/Layer_41.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode:overlay ;
+  background-size: cover;
+  background-position-y: bottom;
+  margin: 0 auto;
+  margin-top: 98px;
+}
+
+.reviews-content1 {
+  display: flex;
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.reviews-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.5px solid #ffffff;
+}
+
+.serch-reviews {
+  display: flex;
+  margin-top: 30px;
+}
+
+.reviews-p-top {
+  color: #222224;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.6px;
+  line-height: 54px;
+  text-transform: uppercase;
+}
+
+.reviews-p-bottom {
+  color: #222224;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  line-height: 24px;
+  margin-top: -10px;
+}
+
+.button-reviews {
+  width: 104px;
+  height: 46px;
+  border-radius: 0 23px 23px 0;
+  background-color: $standardColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 0.35px;
+  transition-duration: 0.4s;
+  &:hover{
+    background-color: darken($color: $standardColor, $amount: 5)
+
+  }
+  &:active{
+    background-color: lighten($color: $standardColor, $amount: 5)
+
+  }
+}
+
+.input-batton {
+  width: 282px;
+  height: 46px;
+  border-radius: 23px 0 0 23px;
+  background-color: #e1e1e1;
+  outline: none;
+  border: none;
+  padding-left: 28px;
+}
+
+.reviews-left {
+  width: 50%;
+  border-right: 0.5px solid #ffffff;
+}
+
+.reviews-left-flex {
+  margin-top: 111px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.reviews-left-right {
+  width: 386px;
+}
+
+.reviews-left-top-p {
+  color: #222224;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+  font-family: "Lato - Bold";
+}
+
+.reviews-left-p-top {
+  color: $standardColor;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lato - Bold";
+  font-style: normal;
+  letter-spacing: 0.4px;
+  line-height: 26px;
+}
+
+.reviews-left-p-bottom {
+  color: #222224;
+  font-family: "Lato Light";
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.3px;
+  line-height: 14px;
+}
+
+.reviews-left-bottom {
+  margin-top: 35px;
+}
+
+.reviews-left-center {
+  margin-top: 19px;
+}
+
+.marg-ph {
+  margin-right: 13px;
+}

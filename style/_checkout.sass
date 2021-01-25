@@ -1,0 +1,256 @@
+.checkout__content
+    margin-top: 89px
+    & > label > p
+        color: #222222
+        font-family: Lato
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        margin-top: 33px
+        cursor: pointer
+        z-index: 2
+
+    & > label
+        cursor: pointer
+        z-index: 2
+
+.checkout__form__left
+    width: 50%
+    margin-bottom: 79px
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+
+    & > h2
+        color: #222222
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        text-transform: uppercase
+
+    & > p
+        color: #b3b2b2
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        margin-top: 15px
+
+    & > form > div > label > p
+        color: #222222
+        font-family: Lato
+        font-size: 12px
+        font-weight: 400
+        text-transform: uppercase
+        cursor: pointer
+        padding-left: 15px
+
+    & > form > div
+        display: flex
+
+    & > form
+        margin-top: 34px
+        margin-bottom: 33px
+        display: flex
+        flex-direction: column
+
+    & > form > div > label:before
+        content: ""
+        display: inline-block
+        height: 10px
+        width: 10px
+        border: 2px solid #ffffff
+        border-radius: 50%
+        box-shadow: 0 0 0 2px #000000
+        margin-left: 1px
+        transition-duration: 0.2s
+
+    & > form > div > label
+        display: flex
+
+    & > form > div > label > p:first-child
+        margin-bottom: 20px
+
+    & > .link__div__checkout > a
+        color: #b3b2b2
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        transition-duration: 0.4s
+        &:hover
+            color: $standardColor
+        &:active
+            color: lighten($color: $standardColor , $amount: 15)
+
+    & > .link__div__checkout
+        display: flex
+        flex-direction: column
+        margin-top: 33px
+
+input[type=radio]:checked + label:before
+    content: ""
+    background-color: #000000
+    display: inline-block
+    height: 10px
+    width: 10px
+    border: 2px solid #ffffff
+    border-radius: 50%
+    box-shadow: 0 0 0 2px #000000
+    margin-left: 1px
+
+.checkout__form__right
+    width: 50%
+
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+    margin-bottom: 79px
+    & > .red
+        color: #ff0d0d
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+
+    & > .input__div__checkout > div > p
+        color: #222222
+        font-family: Lato
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+        text-transform: uppercase
+
+    & > .input__div__checkout > div > p > span
+        color: #ff0d0d
+        font-family: Lato
+        font-size: 17px
+        font-weight: 400
+        line-height: 20px
+
+    & > .input__div__checkout
+        margin-top: 27px
+
+    & > .input__div__checkout > div:last-child
+        margin-top: 23px
+
+    & > h2
+        color: #222222
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        text-transform: uppercase
+    & > p
+        color: #b3b2b2
+        font-family: Lato
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        margin-top: 15px
+
+    &__input
+        width: 390px
+        height: 45px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        padding-left: 15px
+
+.border__div
+    border-bottom: 1px solid #e8e8e8
+    width: 100%
+
+.checkout__button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 180px
+    height: 50px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    transition-duration: 0.4s
+    &:hover
+        background-color: darken($color: #ffffff, $amount: 10)
+
+    &:active
+        background-color: darken($color: #ffffff, $amount: 5)
+
+    & > p
+        color: #4a4a4a
+        font-family: Lato
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+
+.checkout__button_left
+    width: 180px
+    height: 50px
+    margin-top: 38px
+
+.checout__button__right
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 180px
+    height: 50px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    margin-right: 32px
+    transition-duration: 0.4s
+    &:hover
+        background-color: darken($color: #ffffff, $amount: 10)
+
+    &:active
+        background-color: darken($color: #ffffff, $amount: 5)
+
+#fp
+    color: #222222
+    font-family: Lato
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    transition-duration: 0.4s
+    &:hover
+        color: $standardColor
+
+    &:active
+        color: lighten($color: $standardColor , $amount: 15)
+
+#div__for__button
+    display: flex
+    align-items: center
+    margin-top: 32px
+
+.checkbox__div
+    width: 100%
+    height: 72px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    position: relative
+
+    & > p
+        color: #222222
+        font-family: Lato
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+        cursor: pointer
+        z-index: 2
+
+.radio__input__form
+    display: none
+
+.form-nav
+    transition-duration: 0.5s
+    height: 72px
+    overflow: hidden
+
+.form_animation
+
+    margin-left: 35px
+    display: flex
+    transition-duration: 0.5s
+    height: 0px
+    background-color: #ffffff
+    position: relative
+

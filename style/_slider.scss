@@ -1,0 +1,47 @@
+.slider-top {
+  background-color: #e8e8e8;
+  height: 613px;
+}
+
+.slider-content {
+  height: 612px;
+  background-image: url(../img/topHeaderBack.png);
+  background-repeat: no-repeat;
+  background-color: #e8e8e8;
+  background-size: 550px;
+  background-position: top right;
+}
+
+.slider-content-left {
+  display: flex;
+  align-items: center;
+  padding-top: 220px
+}
+
+
+
+.slider-h1 {
+  font-size: 60px;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  margin-top: -5px;
+  margin-left: 12px;
+  font-weight: 400;
+}
+
+.slider-p {
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: normal;
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+.slider-p span {
+  color: $standardColor;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: normal;
+}
