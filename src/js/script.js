@@ -1,25 +1,49 @@
+import navModule from './nav.js';
+import rangeModule from './range.js';
+
 class GoodsList {
 
     constructor() {
-        this.cartArr = []
+        this.cartArr = [],
+            this.filteredGoods = []
+
     }
 
-    addCart(id) {
-        list.cartArr.push(list.filteredGoods[this.id]);
-        console.log(list.cartArr);
+    getStatsData(data) {
+        fetch('statsData.', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        }).then(data => data.json())
+    }
 
+    addCart() {
+        const now = new Date();
+        fetch('addToCArt.', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(list.filteredGoods[this.id])
+            }).then(data => data.json())
+            .then(data => {
+                data.time = now;
+                list.getStatsData(data);
+            });
         const $insh = this.querySelector('.insh');
-        $insh.innerHTML = "&nbsp;Done"
-        
+        $insh.innerHTML = "&nbsp;Done";
+
     }
 
     fetchGoods() {
-        fetch('https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json')
+        fetch('data.')
             .then(data => data.json())
             .then(data => {
-                this.goods = [...data, ...data, ...data, ...data];
-                this.filteredGoods = [...data, ...data, ...data, ...data];
-                this.goods.map((thing, index) => {
+                this.goods = data;
+                this.filteredGoods = data;
+                this.filteredGoods.map((thing, index) => {
                     this.render(thing, index)
                 })
 
@@ -29,7 +53,6 @@ class GoodsList {
 
     render(ob, id) {
         const $products__window = document.querySelector('.products__window');
-
 
         const $window = document.createElement('div');
         $window.classList.add("window")
@@ -42,6 +65,7 @@ class GoodsList {
         const $in_shadow = document.createElement('div');
         $in_shadow.classList.add("in-shadow");
         $in_shadow.id = id;
+        $in_shadow.addEventListener('click', list.addCart);
         $window_shadow.append($in_shadow);
 
 
@@ -61,7 +85,7 @@ class GoodsList {
 
         const $window_img = document.createElement('img');
         $window_img.classList.add("window-img")
-        $window_img.src = "img/Layer_2.jpg"
+        $window_img.src = `${ob.img_URl}`
         $window_photo.append($window_img);
 
 
@@ -71,7 +95,7 @@ class GoodsList {
 
         const $p_top = document.createElement('h3');
         $p_top.classList.add("p-top")
-        $p_top.innerHTML = ob.product_name;
+        $p_top.innerHTML = ob.name;
         $window_text.append($p_top);
 
         const $p_prise = document.createElement('p');
@@ -86,15 +110,15 @@ class GoodsList {
         $products__window.innerHTML = '';
 
         const regexp = new RegExp(value, 'i');
-        this.filteredGoods = this.goods.filter(good => regexp.test(good.product_name));
+        this.filteredGoods = this.goods.filter(good => regexp.test(good.name));
         if (this.filteredGoods.length === 0) {
             const $products__window = document.querySelector('.products__window');
             const $p = document.createElement('p');
             $p.innerHTML = 'Ничего не найдено';
             $products__window.append($p);
         } else {
-            this.filteredGoods.map(thing => {
-                this.render(thing)
+            this.filteredGoods.map((thing, index) => {
+                this.render(thing, index)
             })
         }
 
@@ -113,18 +137,3 @@ searchButton.addEventListener('click', (e) => {
     const value = searchInput.value;
     list.filterGoods(value);
 });
-
-setTimeout(() => {
-    const button__Cart = document.querySelectorAll('.in-shadow')
-    button__Cart.forEach(element => {
-        element.addEventListener('click', list.addCart);
-    })
-
-}, 1000);
-
-let cart = document.querySelector('.cart')
-cart.addEventListener('click', () => {
-    let arr = list.cartArr;
-    localStorage.setItem('goods', JSON.stringify(arr));
-
-})

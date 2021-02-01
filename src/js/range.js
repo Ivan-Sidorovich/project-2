@@ -1,4 +1,4 @@
-setTimeout(init2slider('range', 'range__between', 'range__button_1', 'range__button_2', 'range_inpt1', 'range_inpt2'), 0);
+let call = setTimeout(init2slider('range', 'range__between', 'range__button_1', 'range__button_2', 'range_inpt1', 'range_inpt2'), 0);
 
 function init2slider(id, bt, bt1, bt2, input1, input2) {
   let slider = document.getElementById(id);
@@ -180,5 +180,11 @@ function init2slider(id, bt, bt1, bt2, input1, input2) {
       left: box.left + pageXOffset
     };
   }
+
+}
+
+export default {
+  init2slider,
+  call
 
 }

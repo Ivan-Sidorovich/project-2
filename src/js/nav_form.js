@@ -4,7 +4,6 @@ closeDiv = function () {
     if (this.visible) {
         this.parentNode.style.height = '72px';
         this.visible = false;
-        console.log(this);
     } else {
         this.visible = true;
         this.parentNode.style.height = '492px';

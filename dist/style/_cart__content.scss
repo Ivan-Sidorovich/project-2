@@ -463,7 +463,8 @@ input::-webkit-inner-spin-button {
 .cart-is-empty {
     margin-top: 20px;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    height: 140px;
 }
